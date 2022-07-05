@@ -20,9 +20,13 @@
 <body>
     <h2>Net Ninja Tutorial</h2>
     <div id="app">
+        <!-- Attribute Binding -->
+        <a :href="url" target="_blank">Website</a>            <!-- v-bind = :  -->
+
         <div v-if="showBooks">
             <ul>
                 <li v-for="book in Books">
+                    <img :src="book.img" :alt="book.title">
                     <h3>{{ book.title }}</h3>
                     <p>{{ book.author }} </p>
                 </li>
