@@ -19,6 +19,11 @@ const app = Vue.createApp({
         changeFav(arr){
             arr.isFav = !arr.isFav
         }
+    },
+    computed:{
+        filteredBooks(){
+            return this.Books.filter((book)=> book.isFav)
+        }
     }
 })
   
